@@ -1,0 +1,14 @@
+﻿@page
+@model Rosier.Blog.Pages.EntriesModel
+@{
+    ViewData["Title"] = "RonaldRosier.Net - Blog";
+}
+
+@foreach (var entry in Model.Entries)
+{
+    <div class="entry-container">
+        <div class="entry-title">@entry.Title</div>
+        <div class="entry-date">@entry.PublishDate</div>
+        <div class="entry-content">@entry.Description</div>
+    </div>
+}
