@@ -1,10 +1,14 @@
 ﻿@page
-@model IndexModel
+@model Rosier.Blog.Pages.EntriesModel
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Recent blog entries";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+@foreach (var entry in Model.Entries)
+{
+    <article>
+        <h2>@entry.PublishDate</h2>
+        <h1 class="entry-title">@entry.Title</h1>
+        <div class="entry-content">@entry.Description</div>
+    </article>
+}

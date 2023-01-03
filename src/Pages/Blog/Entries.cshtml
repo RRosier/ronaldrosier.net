@@ -1,14 +1,14 @@
 ﻿@page
 @model Rosier.Blog.Pages.EntriesModel
 @{
-    ViewData["Title"] = "RonaldRosier.Net - Blog";
+    ViewData["Title"] = "Recent blog entries";
 }
 
 @foreach (var entry in Model.Entries)
 {
-    <div class="entry-container">
-        <div class="entry-title">@entry.Title</div>
-        <div class="entry-date">@entry.PublishDate</div>
+    <article>
+        <h2>@entry.PublishDate</h2>
+        <h1 class="entry-title">@entry.Title</h1>
         <div class="entry-content">@entry.Description</div>
-    </div>
+    </article>
 }

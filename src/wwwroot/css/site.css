@@ -21,11 +21,32 @@ html {
   min-height: 100%;
 }
 
-body {
-  margin-bottom: 60px;
+header img.rounded {
+  object-fit: cover;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  margin-right: 20px;
 }
 
-.entry-container {
+header a.navbar-brand {
+  display: flex;
+}
+
+header .navbar-brand h1 {
+  font-size: 1.2em;
+}
+
+header .navbar-brand h2 {
+  font-size: .70em;
+  font-weight: normal;
+}
+
+article {
+  margin: 0;
+}
+
+article+article {
   margin: 50px 0;
 }
 
@@ -40,38 +61,4 @@ body {
 
 .entry-content {
   margin: 10px 0;
-}
-
-img.rounded {
-  object-fit: cover;
-  border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin-right: 20px;
-}
-
-a.navbar-brand {
-  display: flex;
-}
-
-.navbar-brand .subTitle {
-  font-size: .70em;
-}
-
-.navbar-collapse {
-  margin-top: auto;
-}
-
-.nav-link {
-  padding-bottom: 0.3125rem;
-  font-size: .90em;
-}
-
-.navbar>.container {
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.navbar-links {
-  margin-left: 70px;
 }
