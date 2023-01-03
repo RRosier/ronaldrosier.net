@@ -1,19 +1,17 @@
 html {
-  font-size: 14px;
+  font-size: 62.5%;
 }
 
 @media (min-width: 768px) {
   html {
-    font-size: 16px;
+    font-size: 60%;
   }
 }
 
-.btn:focus,
-.btn:active:focus,
-.btn-link.nav-link:focus,
-.form-control:focus,
-.form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+body {
+  font-size: 16px;
+  font-size: 1.6rem;
+  color: #4d4d4d;
 }
 
 html {
@@ -34,29 +32,34 @@ header a.navbar-brand {
 }
 
 header .navbar-brand h1 {
-  font-size: 1.2em;
+  font-size: 2em;
 }
 
 header .navbar-brand h2 {
-  font-size: .70em;
+  font-size: 1.2em;
   font-weight: normal;
 }
 
 article {
-  margin: 0;
+  margin: 4rem 0;
 }
 
-article+article {
-  margin: 50px 0;
+article h2 {
+  font-size: 1.2em;
+  font-weight: normal;
 }
 
-.entry-title {
-  font-weight: bold;
-  font-size: xx-large;
+article h1 {
+  font-size: 2em;
 }
 
-.entry-date {
-  font-style: italic;
+article h1.entry-title a {
+  color: #4d4d4d;
+  text-decoration: none;
+}
+
+article h1.entry-title a:hover {
+  border-bottom: 1px solid;
 }
 
 .entry-content {
