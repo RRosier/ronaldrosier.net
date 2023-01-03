@@ -1,19 +1,25 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Rosier.Blog.Models;
+using Rosier.Blog.Services.Abstractions;
 
-namespace ronaldrosier.net.Pages;
+namespace Rosier.Blog.Pages;
 
 public class IndexModel : PageModel
 {
-    private readonly ILogger<IndexModel> _logger;
+    private readonly IEntriesService _entriesService;
+    private readonly ILogger _logger;
 
-    public IndexModel(ILogger<IndexModel> logger)
+    public IndexModel(IEntriesService entriesService, ILogger<EntriesModel> logger)
     {
-        _logger = logger;
+        this._entriesService = entriesService ?? throw new ArgumentNullException(nameof(entriesService));
+        this._logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
 
-    public void OnGet()
-    {
+    public Entry[] Entries { get; set; } = new Entry[0];
 
+    public async Task OnGetAsync()
+    {
+        this.Entries = await this._entriesService.GetMostRecentEntriesAsync();
     }
 }

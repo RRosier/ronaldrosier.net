@@ -7,8 +7,8 @@
 @foreach (var entry in Model.Entries)
 {
     <article>
-        <h2>@entry.PublishDate.ToString("MMMM dd, yyyy")</h2>
-        <h1 class="entry-title"><a asp-page="/blog/entry" asp-route-slug="@entry.Slug">@entry.Title</a></h1>
+        <h2>@entry.PublishDate</h2>
+        <h1 class="entry-title">@entry.Title</h1>
         <div class="entry-content">@entry.Description</div>
     </article>
 }

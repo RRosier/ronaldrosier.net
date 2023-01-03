@@ -1,0 +1,15 @@
+﻿@page "{slug}"
+@using Microsoft.AspNetCore.Html
+@model Rosier.Blog.Pages.EntryModel
+@{
+    ViewData["Title"] = "@Model.Entry";
+}
+
+@if (Model.Entry != null)
+{
+    <article>
+        <h2>@Model.Entry.PublishDate.ToString("MMMM dd, yyyy")</h2>
+        <h1 class="entry-title">@Model.Entry.Title</h1>
+        <div class="entry-content">@(new HtmlString(@Model.Entry.Content))</div>
+    </article>
+}

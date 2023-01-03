@@ -1,7 +1,13 @@
+using Rosier.Blog.Services;
+using Rosier.Blog.Services.Abstractions;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+
+builder.Services.AddScoped<IEntriesService, EntriesService>();
+// builder.Services.AddBlogServices();
 
 var app = builder.Build();
 
